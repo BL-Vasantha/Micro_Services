@@ -1,0 +1,11 @@
+const express = require("express")
+const logger = require("./logger")
+const health = require("./health")
+const users = require("./routes/users")
+const app = express()
+app.use(express.json())
+app.use("/users" , users)
+app.use("/", health)
+app.listen(3000, ()=>{
+    logger.info("Server Running")
+})

@@ -2,7 +2,16 @@ const express = require("express");
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
+/*
+            OR
+const express = require("express");
+const router = express.router();
+   import express and creates a router Object
+
+
+*/
+
+router.get("/", (req, res) => {     //router routes
   res.json({
     users: [
       "Vasantha",
